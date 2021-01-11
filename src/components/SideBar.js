@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {FaHome, FaBook, FaDashcube, FaMailBulk, FaUserLock} from 'react-icons/fa';
 
 const SideBar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar__links">  <FaHome className="sidebar__icons"/><p>Home</p></div>
-      <div className="sidebar__links"><FaBook className="sidebar__icons"/><p>Profile</p>  </div>
-      <div className="sidebar__links"> <FaDashcube className="sidebar__icons"/> <p>Dashboard</p></div>
-      <div className="sidebar__links"> <FaMailBulk className="sidebar__icons"/><p>Mail</p> </div>
-      <div className="sidebar__links"> <FaUserLock className="sidebar__icons"/><p>Log Out</p></div>
+      <Link className="sidebar__links" to="/" >  <FaHome className="sidebar__icons"/><p>Home</p></Link>
+      <Link className="sidebar__links" to="/Profile"><FaBook className="sidebar__icons" /><p>Profile</p>  </Link>
+      <Link className="sidebar__links" to="/Dashboard"> <FaDashcube className="sidebar__icons"/> <p>Dashboard</p></Link>
+      <Link className="sidebar__links" to="/Mail"> <FaMailBulk className="sidebar__icons"/><p>Mail</p> </Link>
+      <Link className="sidebar__links"> <FaUserLock className="sidebar__icons"/><p>Log Out</p></Link>
     </div>
   )
 }
